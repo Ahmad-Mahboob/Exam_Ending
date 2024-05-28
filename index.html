@@ -12,6 +12,7 @@
             align-items: center;
             margin: 0;
             background-color: #f4f4f4;
+            padding: 20px;
         }
 
         #timer {
@@ -22,20 +23,24 @@
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
             margin-top: 20px;
-            width: 80%;
+            width: 100%;
+            max-width: 600px;
         }
 
         #countdown, #hours-countdown {
             display: flex;
             justify-content: center;
             gap: 20px;
-            font-size: 2em;
+            font-size: 1.5em;
+            flex-wrap: wrap;
         }
 
         #countdown div, #hours-countdown div {
             background: #444;
             padding: 10px 20px;
             border-radius: 5px;
+            flex: 1 1 100px;
+            margin: 5px;
         }
 
         #experiment {
@@ -45,7 +50,14 @@
             font-size: larger;
             padding: 20px;
             margin-top: 20px;
-            width: 80%;
+            width: 100%;
+            max-width: 600px;
+        }
+
+        @media (max-width: 600px) {
+            #countdown div, #hours-countdown div {
+                font-size: 1em;
+            }
         }
     </style>
 </head>
